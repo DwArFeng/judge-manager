@@ -65,7 +65,7 @@
       judge_manager.exception_code_offset.subgrade=0
       ```
       
-6. enjoy it
+5. enjoy it
 
 ---
 
@@ -73,4 +73,4 @@
 
 |judge-manager版本|judge版本|
 |:---|:---|
-|1.0.0|1.6.3-1.6.x|
+|1.0.0|1.1.1-1.1.x|

@@ -8,7 +8,7 @@ module.exports = {
     config.plugins.forEach((val) => {
       if (val.constructor.name === 'HtmlWebpackPlugin') {
         // eslint-disable-next-line no-param-reassign
-        val.options.title = 'Judger-数据评价框架';
+        val.options.title = 'Judge-数据评价框架';
       }
     });
   },
