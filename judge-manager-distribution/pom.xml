@@ -10,6 +10,8 @@
         <version>1.0.0.a-SNAPSHOT</version>
     </parent>
 
+    <packaging>pom</packaging>
+
     <artifactId>judge-manager-distribution</artifactId>
     <name>judge-manager-distribution</name>
     <url>http://maven.apache.org</url>

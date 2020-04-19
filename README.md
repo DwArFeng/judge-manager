@@ -6,6 +6,14 @@
 
 ## 界面
 
+- 实体管理
+  - 部件管理
+  - 驱动器管理
+  - 判断器管理
+- 数据支持
+  - 驱动器支持
+  - 判断器支持
+  
 ---
 
 ## 如何使用
@@ -46,8 +54,8 @@
       conf/dubbo/connection.properties
       ``` properties
       dubbo.zookeeper.address=zookeeper://192.168.154.100:2181
-      dubbo.port=20030
-      dubbo.qos.port=21030
+      dubbo.port=20033
+      dubbo.qos.port=21033
       dubbo.host=192.168.154.1
       ```
       

@@ -13,7 +13,7 @@
     <packaging>war</packaging>
 
     <artifactId>judge-manager-node</artifactId>
-    <name>judge-manager-node Maven Webapp</name>
+    <name>judge-manager-node</name>
     <url>http://maven.apache.org</url>
 
     <properties>
