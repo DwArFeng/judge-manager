@@ -1,5 +1,24 @@
 # ChangeLog
 
+### Release_1.0.3_20200429_build_A
+
+#### 功能构建
+
+- (无)
+
+#### Bug修复
+
+- 修正judge-manager-ui模块下文件的lint错误。
+  - src\views\driverSupport\DriverSupport.vue
+  - src\views\driverSupport\JudgerSupport.vue
+- 调整工程模块的顺序，解决项目打包时的资源错误。
+
+#### 功能移除
+
+- (无)
+
+---
+
 ### Release_1.0.2_20200429_build_A
 
 #### 功能构建
