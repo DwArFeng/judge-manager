@@ -1,7 +1,7 @@
 <template>
   <el-container class="home-container">
     <el-header height="80px">
-      <h2>飞行数据记录器管理服务</h2>
+      <h2>Judge-数据评价框架</h2>
     </el-header>
     <el-container>
       <!-- 侧边栏 -->
