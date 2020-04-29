@@ -434,10 +434,10 @@
     </build>
 
     <modules>
+        <module>judge-manager-ui</module>
         <module>judge-manager-stack</module>
         <module>judge-manager-impl</module>
         <module>judge-manager-node</module>
-        <module>judge-manager-ui</module>
         <module>judge-manager-distribution</module>
     </modules>
 </project>
