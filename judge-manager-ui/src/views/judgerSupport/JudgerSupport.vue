@@ -145,7 +145,7 @@
 </template>
 
 <script>
-  import {all, idLike, labelLike} from '../../api/judgerSupport';
+import { all, idLike, labelLike } from '../../api/judgerSupport';
 
 export default {
   name: 'Permission',

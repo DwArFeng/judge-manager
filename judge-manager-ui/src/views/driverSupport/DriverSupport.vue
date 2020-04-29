@@ -145,25 +145,25 @@
 </template>
 
 <script>
-  import {
-    all, idLike, labelLike,
-  } from '../../api/driverSupport';
+import {
+  all, idLike, labelLike,
+} from '../../api/driverSupport';
 
-  export default {
-    name: 'Permission',
-    data() {
-      return {
-        driverSupport: {},
-        pageSize: 15,
-        currentPage: 1,
-        anchorDriverSupport: {
-          key: '',
-          label: '',
-          description: '',
-          exampleContent: '',
-        },
-        showDetailVisible: false,
-        id2Search: '',
+export default {
+  name: 'Permission',
+  data() {
+    return {
+      driverSupport: {},
+      pageSize: 15,
+      currentPage: 1,
+      anchorDriverSupport: {
+        key: '',
+        label: '',
+        description: '',
+        exampleContent: '',
+      },
+      showDetailVisible: false,
+      id2Search: '',
       label2Search: '',
     };
   },
