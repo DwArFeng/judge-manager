@@ -4,7 +4,7 @@
     <el-breadcrumb separator="/">
       <el-breadcrumb-item>管理服务</el-breadcrumb-item>
       <el-breadcrumb-item>数据支持</el-breadcrumb-item>
-      <el-breadcrumb-item>驱动器支持</el-breadcrumb-item>
+      <el-breadcrumb-item>判断器支持</el-breadcrumb-item>
     </el-breadcrumb>
     <!-- 卡片工作区 -->
     <el-card class="box-card">
@@ -15,7 +15,7 @@
             <el-input
               class="input-with-select"
               clearable
-              placeholder="请输入驱动器支持ID，支持任意部位匹配"
+              placeholder="请输入判断器支持ID，支持任意部位匹配"
               v-model="id2Search"
             >
               <el-button
@@ -29,7 +29,7 @@
             <el-input
               class="input-with-select"
               clearable
-              placeholder="请输入驱动器支持标签名称，支持任意部位匹配"
+              placeholder="请输入判断器支持标签名称，支持任意部位匹配"
               v-model="label2Search"
             >
               <el-button
@@ -43,7 +43,7 @@
       </div>
       <!-- 表格 -->
       <el-table
-        :data="driverSupport.data"
+        :data="judgerSupport.data"
         stripe
         style="width: 100%">
         <el-table-column
@@ -88,7 +88,7 @@
               :current-page.sync="currentPage"
               :hide-on-single-page="true"
               :page-size="pageSize"
-              :total="parseInt(driverSupport.count)"
+              :total="parseInt(judgerSupport.count)"
               @current-change="onPageChanged"
               background
               layout="prev, pager, next">
@@ -103,7 +103,7 @@
       center
       title="详细信息">
       <el-form
-        :model="anchorDriverSupport"
+        :model="anchorJudgerSupport"
         label-position="right"
         label-width="80px"
         ref="createPermissionForm"
@@ -111,13 +111,13 @@
         <el-form-item label="ID" prop="key">
           <el-input
             :readonly="true"
-            v-model="anchorDriverSupport.key"
+            v-model="anchorJudgerSupport.key"
           ></el-input>
         </el-form-item>
         <el-form-item label="标签" prop="label">
           <el-input
             :readonly="true"
-            v-model="anchorDriverSupport.label"
+            v-model="anchorJudgerSupport.label"
           ></el-input>
         </el-form-item>
         <el-form-item label="描述" prop="description">
@@ -125,7 +125,7 @@
             :readonly="true"
             autosize
             type="textarea"
-            v-model="anchorDriverSupport.description"
+            v-model="anchorJudgerSupport.description"
           ></el-input>
         </el-form-item>
         <el-form-item label="配置示例" prop="exampleContent">
@@ -133,7 +133,7 @@
             :readonly="true"
             autosize
             type="textarea"
-            v-model="anchorDriverSupport.exampleContent"
+            v-model="anchorJudgerSupport.exampleContent"
           ></el-input>
         </el-form-item>
       </el-form>
@@ -145,18 +145,16 @@
 </template>
 
 <script>
-import {
-  all, idLike, labelLike,
-} from '../../api/driverSupport';
+  import {all, idLike, labelLike} from '../../api/judgerSupport';
 
 export default {
   name: 'Permission',
   data() {
     return {
-      driverSupport: {},
+      judgerSupport: {},
       pageSize: 15,
       currentPage: 1,
-      anchorDriverSupport: {
+      anchorJudgerSupport: {
         key: '',
         label: '',
         description: '',
@@ -189,7 +187,7 @@ export default {
           if (res.data.current_page >= res.data.total_pages && res.data.total_pages > 0) {
             return all(res.data.total_pages - 1, this.pageSize);
           }
-          this.driverSupport = res.data;
+          this.judgerSupport = res.data;
           this.currentPage = res.data.current_page + 1;
           return null;
         })
@@ -214,7 +212,7 @@ export default {
             });
             return null;
           }
-          this.driverSupport = res.data;
+          this.judgerSupport = res.data;
           this.currentPage = res.data.current_page + 1;
           return null;
         });
@@ -223,10 +221,10 @@ export default {
       if (this.$refs.updatePermissionForm !== undefined) {
         this.$refs.updatePermissionForm.resetFields();
       }
-      this.anchorDriverSupport.key = row.key.string_id;
-      this.anchorDriverSupport.label = row.label;
-      this.anchorDriverSupport.description = row.description;
-      this.anchorDriverSupport.exampleContent = row.example_content;
+      this.anchorJudgerSupport.key = row.key.string_id;
+      this.anchorJudgerSupport.label = row.label;
+      this.anchorJudgerSupport.description = row.description;
+      this.anchorJudgerSupport.exampleContent = row.example_content;
       this.showDetailVisible = true;
     },
     exampleContentFormatter() {
@@ -246,7 +244,7 @@ export default {
               });
               return null;
             }
-            this.driverSupport = res.data;
+            this.judgerSupport = res.data;
             this.currentPage = res.data.current_page + 1;
             return null;
           })
@@ -275,7 +273,7 @@ export default {
               });
               return null;
             }
-            this.driverSupport = res.data;
+            this.judgerSupport = res.data;
             this.currentPage = res.data.current_page + 1;
             return null;
           })
